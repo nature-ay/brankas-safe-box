@@ -39,7 +39,7 @@ void setup() {
 
 }
 
-
+//line is added by zky
 void loop() {
   lcd.setCursor(0,0);
   lcd.print("18518241055");
@@ -49,7 +49,7 @@ void loop() {
     Data[data_count]=customKey;
     lcd.setCursor(data_count+0,1);
     lcd.print(Data[data_count]);
-    data_count++;
+    data_count+1;
   }
 
 if(data_count == KS_Isi-1){
@@ -67,8 +67,9 @@ if(data_count == KS_Isi-1){
     digitalWrite(13,LOW); 
     delay(1000);
   }
-  
-  lcd.clear();
+
+  // this line is added by zky
+  lcd.clear(); 
   clearData();
 }
 
@@ -78,5 +79,6 @@ void clearData(){
   while(data_count!=0){
     Data[data_count--]=0;
   }
+  
   return;
 }
